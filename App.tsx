@@ -1,6 +1,6 @@
 // --------------------------------------------------------------------- Building
 import React, { Component } from 'react';
-import { Image } from 'react-native';
+import { Image, Keyboard } from 'react-native';
 import { AppLoading } from 'expo';
 import * as Font from 'expo-font';
 import Constants from 'expo-constants';
@@ -34,6 +34,7 @@ export default class AnatomyExample extends Component {
   }
 
   buscar = async () =>{
+    Keyboard.dismiss();
     this.setState({spinner:true})
     this.setState({ error: false })
     const myRequest = new Request('http://alerta.exa.unne.edu.ar/alertafacena/public/api/expediente/'+this.state.hash,
@@ -103,15 +104,17 @@ export default class AnatomyExample extends Component {
               <H2></H2>
               <Item >
                 <Text>
-            <H2 >Expediente: N° </H2> 
-            <H2 style={{fontWeight: 'bold'}}>{this.state.expediente}</H2>
+                    <H2 >Expediente: N° </H2> 
+                    <H2 style={{fontWeight: 'bold'}}>{this.state.expediente}</H2>
                 </Text>
               </Item>
               <H3></H3>
-            <H3>{this.state.asunto}</H3>
+              <Item>
+
+                <Text>{this.state.asunto}</Text>
+              </Item>
             <Item>
-                <H3>en {this.state.destino} </H3>
-                <H3> desde el {this.state.fecha}</H3>
+                <Text>en {this.state.destino}  desde el {this.state.fecha}</Text>
             </Item>
               
               </View>
