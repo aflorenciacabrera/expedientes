@@ -1,23 +1,4 @@
-  // import React from 'react';
-  // import { StyleSheet, Text, View } from 'react-native';
-
-  // export default function App() {
-  //   return (
-  //     <View style={styles.container}>
-  //       <Text>HOLA</Text>
-  //     </View>
-  //   );
-  // }
-
-  // const styles = StyleSheet.create({
-  //   container: {
-  //     flex: 1,
-  //     backgroundColor: '#fff',
-  //     alignItems: 'center',
-  //     justifyContent: 'center',
-  //   },
-  // });
-// ---------------------------------------------------------------------
+// --------------------------------------------------------------------- Building
 import React, { Component } from 'react';
 import { Image } from 'react-native';
 import { Container, Item, Input, Header, Title, Content, Footer, FooterTab, Button, Left, Right, Body, Icon, Text, CardItem } from 'native-base';
@@ -32,26 +13,33 @@ export default class AnatomyExample extends Component {
             </Button>
           </Left> */}
           <Body>
-            <Title >    Seguimiento de
-            Expedientes</Title>
+            <Title >Seguimiento de Expedientes</Title>
           </Body>
         </Header >
    {/* ----------------------------------------------------------------------------- */}
         <Content >
           <Image style={{ width: 370, height: 200 }} source={require('./assets/buscador.png')} />
-          
           <Item >
-            <Left>
+            
               <Button primary >
                 <Icon name="ios-search" />
-              </Button></Left>
+              </Button>
             <Input placeholder="Código" />
             <Icon name="ios-folder" />
           </Item>
         </Content>
         <Content>
+          
+            <Text >Expediente:</Text>
+            <Text >Descripciones:</Text>
+         
         </Content>
-      
+        {/* ------------------------------------ */}
+        {/* Expediente: N° 09-2019-00002
+
+        S/ LA COMPRA DE DOS (2) FICHEROS MET?LICOS. DETALLA CARACTER?STICA DEL MISMO. ADJUNTA PRESUPUESTO.
+
+        en ARCHIVO DEL DEPARTAMENTO DE MESA E/S desde el 2019-05-27 */}
 {/* ----------------------------------------------------------------------------------- */}
         <Footer>
           <FooterTab>
@@ -61,33 +49,7 @@ export default class AnatomyExample extends Component {
           </FooterTab>
         </Footer>
       </Container>
-      // <Container>
-      //           <Content>
-      //               // NativeBase default style
-      //               <Button> Click Me! </Button>
-      //           </Content>
-      //       </Container>
     );
   }
 }
 
-// import React, { Component } from 'react';
-// import { Container, Header, Item, Input, Icon, Button, Text } from 'native-base';
-// export default class SearchBarExample extends Component {
-//   render() {
-//     return (
-//       <Container>
-//         <Header searchBar rounded>
-//           <Item>
-//             <Icon name="ios-search" />
-//             <Input placeholder="Search" />
-//             <Icon name="ios-people" />
-//           </Item>
-//           <Button transparent>
-//             <Text>Search</Text>
-//           </Button>
-//         </Header>
-//       </Container>
-//     );
-//   }
-// }
