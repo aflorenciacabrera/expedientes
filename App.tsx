@@ -55,7 +55,7 @@ export default class AnatomyExample extends Component {
         
       })
       .catch(() => {///cuando no se encuentra el expediente
-
+        this.setState({ expediente: false })
         this.setState({ spinner: false })
         this.setState({ error: true })
       }
@@ -127,14 +127,13 @@ export default class AnatomyExample extends Component {
         }
         {
           this.state.error?
-          <H2>
-            Expediente no encontrado
-          </H2>
+              <View style={{ alignItems: "center", }} >
+                <H2> </H2>
+                   <H2>Expediente no encontrado </H2> 
+              </View>
           :null
         }
-
         </Content>
-       
         {/* ------------------------------------ */}
         {/* Expediente: N° 09-2019-00002
 
