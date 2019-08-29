@@ -3,6 +3,11 @@ import React, { Component } from 'react';
 import { Image } from 'react-native';
 import { Container, Item, Input, Header, Title, Content, Footer, FooterTab, Button, Left, Right, Body, Icon, Text, CardItem } from 'native-base';
 export default class AnatomyExample extends Component {
+  // constructor(props) {
+  //   super(props);
+  //   this.state = {
+  //   };
+  // }
   render() {
     return (
       <Container>
